@@ -1,4 +1,4 @@
-def getPassword() -> int:
+def get_password() -> int:
     p = 0
     ii = 50
     with open("./input.txt") as f:
@@ -13,5 +13,5 @@ def getPassword() -> int:
 
 
 if __name__ == "__main__":
-    password = getPassword()
+    password = get_password()
     print("The password is:", password)
