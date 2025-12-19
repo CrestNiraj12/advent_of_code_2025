@@ -7,7 +7,8 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | Day | Problem | Solution | Status |
 |-----|---------|----------|--------|
 | 1 | Rotation-based Password | [Python](day1/main.py) | ✅ |
-| 2-25 | TBD | - | ⏳ |
+| 2 | Password Range Validator | [Python](day2/part1/main.py) | 🔄 |
+| 3-25 | TBD | - | ⏳ |
 
 ## Structure
 
