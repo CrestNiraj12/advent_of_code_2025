@@ -7,7 +7,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | Day | Problem | Solution | Status |
 |-----|---------|----------|--------|
 | 1 | Rotation-based Password | [Python](day1/main.py) | ✅ |
-| 2 | Password Range Validator | [Python](day2/part1/main.py) | 🔄 |
+| 2 | Password Range Validator | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
 | 3-25 | TBD | - | ⏳ |
 
 ## Structure
@@ -57,9 +57,11 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 ### Day 2: Password Range Validator
 
-The solution validates password ranges by finding "mirror" numbers within given ranges. For each range, it identifies 6-digit numbers where the first three digits exactly match the last three digits, then sums all valid IDs found across all ranges.
+**Part 1:** The solution validates password ranges by finding "mirror" numbers within given ranges. For each range, it identifies numbers where the first half of the digits exactly match the second half (e.g., 123123), then sums all valid IDs found across all ranges.
 
-**File:** [day2/part1/main.py](day2/part1/main.py)
+**Part 2:** Extends validation to find numbers with any repeating pattern. It checks if a number can be formed by repeating a smaller block of digits multiple times (e.g., 121212 = 12 repeated 3 times, or 111111 = 1 repeated 6 times).
+
+**Files:** [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py)
 
 ## Notes
 
