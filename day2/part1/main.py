@@ -2,7 +2,9 @@ def sum_of_invalid_ids() -> int:
     iid = 0
     with open("../input.txt") as f:
         ranges = [
-            tuple(map(int, r.split("-"))) for r in f.readline().strip().split(",")
+            tuple(map(int, line.split("-")))
+            for lines in f.readlines()
+            for line in lines.strip().split(",")
         ]
         for start, end in ranges:
             for n in range(start, end + 1):
