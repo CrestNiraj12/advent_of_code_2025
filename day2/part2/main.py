@@ -10,13 +10,13 @@ def sum_of_invalid_ids() -> int:
             for n in range(r1, r2 + 1):
                 str_n = str(n)
                 len_n = len(str_n)
-                for div in range(2, len_n + 1):
+                for div in range(1, (len_n // 2) + 1):
                     if len_n % div != 0:
                         continue
 
                     part = len_n // div
-                    block = str_n[:part]
-                    if block * div == str_n:
+                    block = str_n[:div]
+                    if block * part == str_n:
                         iid += n
                         break
 
