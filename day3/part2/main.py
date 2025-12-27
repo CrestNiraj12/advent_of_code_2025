@@ -14,8 +14,8 @@ def getMaximumJoltage() -> int:
             best_i = 0
             result = ""
             while i < end + 1 and end < len_line:
-                n = int(line[i])
-                if n > int(line[best_i]):
+                n = line[i]
+                if n > line[best_i]:
                     best_i = i
 
                 i += 1
