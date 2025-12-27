@@ -8,7 +8,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 |-----|---------|----------|--------|
 | 1 | Rotation-based Password | [Python](day1/main.py) | ✅ |
 | 2 | Password Range Validator | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
-| 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py) | 🟨 |
+| 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py), [Part 2](TBD) | 🟨 |
 | 4-25 | TBD | - | ⏳ |
 
 ## Structure
