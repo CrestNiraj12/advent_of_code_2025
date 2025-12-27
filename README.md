@@ -8,7 +8,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 |-----|---------|----------|--------|
 | 1 | Rotation-based Password | [Python](day1/main.py) | ✅ |
 | 2 | Password Range Validator | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
-| 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py), [Part 2](TBD) | 🟨 |
+| 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py) | ✅ |
 | 4-25 | TBD | - | ⏳ |
 
 ## Structure
@@ -68,9 +68,9 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Part 1:** The solution processes lines of numerical data to calculate total output joltage. For each line, it identifies the two highest single-digit values and sums them. Lines with 2 or fewer characters are treated as direct values and added to the total.
 
-**Part 2:** TBD
+**Part 2:** Uses a sliding-window strategy to build a 12-digit value from each line. It repeatedly selects the highest digit within the current valid range, appends it to the result, and shifts the window until 12 digits are chosen, then sums these values across all lines.
 
-**File:** [Part 1](day3/part1/main.py)
+**Files:** [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py)
 
 ## Notes
 
