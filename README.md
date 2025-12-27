@@ -68,6 +68,8 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Part 1:** The solution processes lines of numerical data to calculate total output joltage. For each line, it identifies the two highest single-digit values and sums them. Lines with 2 or fewer characters are treated as direct values and added to the total.
 
+**Part 2:** TBD
+
 **File:** [Part 1](day3/part1/main.py)
 
 ## Notes
