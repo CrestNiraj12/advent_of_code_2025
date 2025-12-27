@@ -8,7 +8,8 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 |-----|---------|----------|--------|
 | 1 | Rotation-based Password | [Python](day1/main.py) | ✅ |
 | 2 | Password Range Validator | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
-| 3-25 | TBD | - | ⏳ |
+| 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py) | 🟨 |
+| 4-25 | TBD | - | ⏳ |
 
 ## Structure
 
@@ -62,6 +63,12 @@ The solution processes directional rotation instructions (L/R followed by a numb
 **Part 2:** Extends validation to find numbers with any repeating pattern. It checks if a number can be formed by repeating a smaller block of digits multiple times (e.g., 121212 = 12 repeated 3 times, or 111111 = 1 repeated 6 times).
 
 **Files:** [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py)
+
+### Day 3: Maximum Joltage Calculator
+
+**Part 1:** The solution processes lines of numerical data to calculate total output joltage. For each line, it identifies the two highest single-digit values and sums them. Lines with 2 or fewer characters are treated as direct values and added to the total.
+
+**File:** [Part 1](day3/part1/main.py)
 
 ## Notes
 
