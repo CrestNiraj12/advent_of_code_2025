@@ -1,5 +1,5 @@
 def getMaximumJoltage() -> int:
-    with open("./input.txt") as f:
+    with open("../input.txt") as f:
         total = 0
         for line in f:
             line = line.strip()
