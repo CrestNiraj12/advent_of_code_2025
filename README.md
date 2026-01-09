@@ -73,8 +73,6 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py)
 
-## Notes
-
 ### Day 4: Accessible Papers
 
 **Part 1:** Counts how many '@' cells in the grid have fewer than four adjacent '@' neighbors. Adjacency is checked in all 8 directions (including diagonals).
@@ -83,6 +81,7 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day4/part1/main.py) 
 
+## Notes
 
 - All solutions are written in Python 3
 - Each solution reads its input from a local `input.txt` file
