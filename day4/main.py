@@ -36,8 +36,6 @@ def getTotalAccessiblePapers() -> int:
 
                 if adj_roll_count < 4:
                     accessible_rolls += 1
-
-            line_count += 1
         return accessible_rolls
 
 
