@@ -10,7 +10,8 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 2 | Password Range Validator | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
 | 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py) | ✅ |
 | 4 | Accessible Papers | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
-| 5-25 | TBD | - | ⏳ |
+| 5 | Fresh Ingredients | [Part 1](day5/part1/main.py), [Part 2](TBD) | 🟨 |
+| 6-25 | TBD | - | ⏳ |
 
 ## Structure
 
@@ -80,6 +81,14 @@ The solution processes directional rotation instructions (L/R followed by a numb
 **Part 2:** Iteratively removes accessible '@' cells (those with fewer than four adjacent '@' neighbors) until no more are removable, and returns the total removed across all iterations.
 
 **Files:** [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py)
+
+### Day 5: Fresh Ingredients
+
+**Part 1:** Given a list of fresh ingredient ranges and individual ingredient values, counts how many ingredients fall within any of the fresh ranges.
+
+**Part 2:** TBD
+
+**Files:** [Part 1](day5/part1/main.py)
 
 ## Notes
 
