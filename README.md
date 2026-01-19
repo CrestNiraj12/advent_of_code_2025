@@ -11,7 +11,8 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py) | ✅ |
 | 4 | Accessible Papers | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
 | 5 | Fresh Ingredients | [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py) | ✅ |
-| 6-25 | TBD | - | ⏳ |
+| 6 | Column Calculator | [Part 1](day6/part1/main.py), [Part 2](TBD) | 🟨 |
+| 7-25 | TBD | - | ⏳ |
 
 ## Structure
 
@@ -89,6 +90,14 @@ The solution processes directional rotation instructions (L/R followed by a numb
 **Part 2:** Merges overlapping fresh ingredient ranges and counts the total number of fresh ingredients by summing the span of each merged range.
 
 **Files:** [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py)
+
+### Day 6: Column Calculator
+
+**Part 1:** Reads a grid of numbers and operators column by column. For each column, collects numbers until an operator (+, -, *) is found, then applies that operator to all collected numbers using reduce and adds the result to the grand total.
+
+**Part 2:** TBD
+
+**Files:** [Part 1](day6/part1/main.py)
 
 ## Notes
 
