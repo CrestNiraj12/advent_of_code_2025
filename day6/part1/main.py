@@ -14,11 +14,10 @@ def get_grand_total() -> int:
         if not lines:
             return 0
 
-        total_lines = len(lines)
         line_len = len(lines[0])
         for j in range(line_len):
             nums = []
-            for i in range(total_lines):
+            for i in range(len(lines)):
                 n = lines[i][j]
                 if nums and n in ops:
                     grand_total += reduce(ops[n], nums)
