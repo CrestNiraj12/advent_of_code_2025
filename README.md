@@ -12,7 +12,8 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 4 | Accessible Papers | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
 | 5 | Fresh Ingredients | [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py) | ✅ |
 | 6 | Column Calculator | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
-| 7-25 | TBD | - | ⏳ |
+| 7 | Beam Splitter | [Part 1](day7/part1/main.py), Part 2 TBD | ⏳ |
+| 8-25 | TBD | - | ⏳ |
 
 ## Structure
 
@@ -98,6 +99,14 @@ The solution processes directional rotation instructions (L/R followed by a numb
 **Part 2:** Processes the grid columns from right to left, building multi-digit numbers from consecutive digits in each column. When an operator (+, -, *) is encountered, applies the operation to all numbers collected in that column using functools.reduce and adds the result to the grand total. Skips processing the next column if it's empty following an operator.
 
 **Files:** [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py)
+
+#### Day 7: Beam Splitter
+
+**Part 1:** Simulates a tachyon beam navigating a grid starting from an entry point 'S', where '^' acts as a splitter causing the beam to propagate to left and right adjacent positions if they exist, while counting the occurrences of splits. The algorithm iterates through each row of the grid, maintaining sets for previous and current beam positions. Upon encountering a '^', it adds adjacent indices (left and right) if within bounds and increments the split counter. Positions without splitters are carried over.
+
+**Part 2:** Not implemented yet.
+
+**Files:** [Part 1](day7/part1/main.py), Part 2 TBD
 
 ## Notes
 
