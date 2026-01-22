@@ -6,13 +6,13 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 
 | Day | Problem | Solution | Status |
 |-----|---------|----------|--------|
-| 1 | Rotation-based Password | [Python](day1/main.py) | ✅ |
-| 2 | Password Range Validator | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
-| 3 | Maximum Joltage Calculator | [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py) | ✅ |
-| 4 | Accessible Papers | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
-| 5 | Fresh Ingredients | [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py) | ✅ |
-| 6 | Column Calculator | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
-| 7 | Beam Splitter | [Part 1](day7/part1/main.py), Part 2 TBD | ⏳ |
+| 1 | Secret Entrance | [Python](day1/main.py) | ✅ |
+| 2 | Gift Shop | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
+| 3 | Lobby | [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py) | ✅ |
+| 4 | Printing Department | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
+| 5 | Cafeteria | [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py) | ✅ |
+| 6 | Trash Compactor | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
+| 7 | Laboratories | [Part 1](day7/part1/main.py), Part 2 TBD | ⏳ |
 | 8-25 | TBD | - | ⏳ |
 
 ## Structure
@@ -54,13 +54,13 @@ This repository contains my personal solutions to the Advent of Code 2025 challe
 
 ## Solutions
 
-### Day 1: Rotation-based Password
+### Day 1: Secret Entrance
 
 The solution processes directional rotation instructions (L/R followed by a number) to calculate a password by tracking position changes that wrap around 100 and counting how many times the position hits zero.
 
 **File:** [day1/main.py](day1/main.py)
 
-### Day 2: Password Range Validator
+### Day 2: Gift Shop
 
 **Part 1:** The solution validates password ranges by finding "mirror" numbers within given ranges. For each range, it identifies numbers where the first half of the digits exactly match the second half (e.g., 123123), then sums all valid IDs found across all ranges.
 
@@ -68,7 +68,7 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py)
 
-### Day 3: Maximum Joltage Calculator
+### Day 3: Lobby
 
 **Part 1:** The solution processes lines of numerical data to calculate total output joltage. For each line, it identifies the two highest single-digit values and sums them. Lines with 2 or fewer characters are treated as direct values and added to the total.
 
@@ -76,7 +76,7 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py)
 
-### Day 4: Accessible Papers
+### Day 4: Printing Department
 
 **Part 1:** Counts how many '@' cells in the grid have fewer than four adjacent '@' neighbors. Adjacency is checked in all 8 directions (including diagonals).
 
@@ -84,7 +84,7 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py)
 
-### Day 5: Fresh Ingredients
+### Day 5: Cafeteria
 
 **Part 1:** Given a list of fresh ingredient ranges and individual ingredient values, counts how many ingredients fall within any of the fresh ranges.
 
@@ -92,7 +92,7 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py)
 
-### Day 6: Column Calculator
+### Day 6: Trash Compactor
 
 **Part 1:** Reads a grid of numbers and operators column by column. For each column, collects numbers until an operator (+, -, *) is found, then applies that operator to all collected numbers using reduce and adds the result to the grand total.
 
@@ -100,7 +100,7 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py)
 
-#### Day 7: Beam Splitter
+### Day 7: Laboratories
 
 **Part 1:** Simulates a tachyon beam navigating a grid starting from an entry point 'S', where '^' acts as a splitter causing the beam to propagate to left and right adjacent positions if they exist, while counting the occurrences of splits. The algorithm iterates through each row of the grid, maintaining sets for previous and current beam positions. Upon encountering a '^', it adds adjacent indices (left and right) if within bounds and increments the split counter. Positions without splitters are carried over.
 
