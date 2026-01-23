@@ -12,8 +12,9 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 4 | Printing Department | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
 | 5 | Cafeteria | [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py) | ✅ |
 | 6 | Trash Compactor | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
-| 7 | Laboratories | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
-| 8-25 | TBD | - | ⏳ |
+| 7 | Beam Splitter | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
+| 8 | Playground | [Part 1](day8/part1/main.py), Part 2 TBD | ⏳ |
+| 9-25 | TBD | - | ⏳ |
 
 ## Structure
 
@@ -108,7 +109,13 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Files:** [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py)
 
-## Notes
+### Day 8: Playground
+
+**Part 1:** The solution processes 3D coordinates to identify connected circuits by calculating Euclidean distances. It generates edges between points within a certain distance threshold, then uses a union-find approach to group them into circuits. Finally, it finds the three largest circuit sizes and multiplies them together.
+
+**Part 2:** Not implemented yet.
+
+**Files:** [Part 1](day8/part1/main.py), Part 2 TBD
 
 - All solutions are written in Python 3
 - Each solution reads its input from a local `input.txt` file
