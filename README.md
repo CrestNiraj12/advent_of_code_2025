@@ -6,7 +6,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 
 | Day | Problem | Solution | Status |
 |-----|---------|----------|--------|
-| 1 | Secret Entrance | [Python](day1/main.py) | ✅ |
+| 1 | Secret Entrance | [Part 1](day1/part1/main.py), [Part 2](day1/part2/main.py) | ✅ |
 | 2 | Gift Shop | [Part 1](day2/part1/main.py), [Part 2](day2/part2/main.py) | ✅ |
 | 3 | Lobby | [Part 1](day3/part1/main.py), [Part 2](day3/part2/main.py) | ✅ |
 | 4 | Printing Department | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
@@ -28,22 +28,8 @@ day{N}/
     └── main.py      # Part 2 solution (if completed)
 ```
 
-Alternatively, for single-file solutions:
-```
-day{N}/
-├── main.py          # Solution implementation
-└── input.txt        # Puzzle input
-```
-
 ## Running Solutions
 
-To run a specific day's solution:
-```bash
-cd day1
-python main.py
-```
-
-Or for multi-part solutions:
 ```bash
 cd day2/part1
 python main.py
@@ -57,9 +43,11 @@ This repository contains my personal solutions to the Advent of Code 2025 challe
 
 ### Day 1: Secret Entrance
 
-The solution processes directional rotation instructions (L/R followed by a number) to calculate a password by tracking position changes that wrap around 100 and counting how many times the position hits zero.
+**Part 1:** The solution processes directional rotation instructions (L/R followed by a number) to calculate a password by tracking position changes that wrap around 100 and counting how many times the position hits zero.
 
-**File:** [day1/main.py](day1/main.py)
+**Part 2:** Extends the simulation to count the total number of times the position crosses multiples of 100 during rotations, accumulating the floor division changes.
+
+**Files:** [Part 1](day1/part1/main.py), [Part 2](day1/part2/main.py)
 
 ### Day 2: Gift Shop
 

@@ -1,7 +1,7 @@
 def get_password() -> int:
     p = 0
     ii = 50
-    with open("./input.txt") as f:
+    with open("../input.txt") as f:
         for line in f:
             line = line.strip()
             dir = line[0]
