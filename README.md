@@ -12,7 +12,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 4 | Printing Department | [Part 1](day4/part1/main.py), [Part 2](day4/part2/main.py) | ✅ |
 | 5 | Cafeteria | [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py) | ✅ |
 | 6 | Trash Compactor | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
-| 7 | Beam Splitter | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
+| 7 | Laboratories | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
 | 8 | Playground | [Part 1](day8/part1/main.py), Part 2 TBD | ⏳ |
 | 9-25 | TBD | - | ⏳ |
 
