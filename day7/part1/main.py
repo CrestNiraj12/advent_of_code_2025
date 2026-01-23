@@ -1,6 +1,6 @@
 def get_beam_split_times() -> int:
     ENTRY, SPLITTER = "S", "^"
-    prev_indices, beam_indices = set(), set()
+    prev_indices = set()
     split_count = 0
     last_index = 0
     with open("../input.txt") as f:
@@ -13,6 +13,7 @@ def get_beam_split_times() -> int:
 
         for ln in f:
             line = ln.strip()
+            beam_indices = set()
             for i in prev_indices:
                 if line[i] == SPLITTER:
                     if i < last_index:
@@ -25,8 +26,7 @@ def get_beam_split_times() -> int:
                 else:
                     beam_indices.add(i)
 
-            prev_indices, beam_indices = beam_indices, prev_indices
-            beam_indices.clear()
+            prev_indices = beam_indices
 
     return split_count
 
