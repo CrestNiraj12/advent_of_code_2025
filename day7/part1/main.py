@@ -1,21 +1,18 @@
 def get_beam_split_times() -> int:
     ENTRY, SPLITTER = "S", "^"
     prev_indices, beam_indices = set(), set()
-    first_line = True
     split_count = 0
     last_index = 0
     with open("../input.txt") as f:
+        first_line = next(f).strip()
+        last_index = len(first_line) - 1
+        entry_index = first_line.find(ENTRY)
+        assert entry_index != -1, "There must be a tachyon entry point"
+
+        prev_indices.add(entry_index)
+
         for ln in f:
             line = ln.strip()
-            if first_line:
-                last_index = len(line) - 1
-                entry_index = line.find(ENTRY)
-                assert entry_index != -1, "There must be a tachyon entry point"
-
-                prev_indices.add(entry_index)
-                first_line = False
-                continue
-
             for i in prev_indices:
                 if line[i] == SPLITTER:
                     if i < last_index:
