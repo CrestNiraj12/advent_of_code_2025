@@ -27,8 +27,6 @@ def get_total_timelines() -> int:
                     next_map[i] += p
 
             col_map = next_map
-
-    print(col_map)
     return sum(col_map.values())
 
 
