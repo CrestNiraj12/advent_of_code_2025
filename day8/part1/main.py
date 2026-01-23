@@ -4,7 +4,7 @@ from math import prod
 
 
 def get_largest_circuits_mul() -> int:
-    circuitsMap = {}
+    circuits_map = {}
     with open("../input.txt") as f:
         lines = [tuple(map(int, ln.strip().split(","))) for ln in f if ln.strip()]
         edges = (
@@ -20,29 +20,29 @@ def get_largest_circuits_mul() -> int:
         sorted_top_ds = heapq.nsmallest(1000, edges, key=lambda x: x[0])
 
         ci = 0
-        for _, coord1, coord2 in sorted_top_ds:
-            in1 = coord1 in circuitsMap
-            in2 = coord2 in circuitsMap
+        for _, coord_1, coord_2 in sorted_top_ds:
+            in1 = coord_1 in circuits_map
+            in2 = coord_2 in circuits_map
 
             if in1 and in2:
-                c1, c2 = circuitsMap[coord1], circuitsMap[coord2]
+                c1, c2 = circuits_map[coord_1], circuits_map[coord_2]
                 if c1 == c2:
                     continue
 
-                for k in list(circuitsMap.keys()):
-                    if circuitsMap[k] == c2:
-                        circuitsMap[k] = c1
+                for k in list(circuits_map.keys()):
+                    if circuits_map[k] == c2:
+                        circuits_map[k] = c1
 
             elif in1:
-                circuitsMap[coord2] = circuitsMap[coord1]
+                circuits_map[coord_2] = circuits_map[coord_1]
             elif in2:
-                circuitsMap[coord1] = circuitsMap[coord2]
+                circuits_map[coord_1] = circuits_map[coord_2]
             else:
-                circuitsMap[coord1] = ci
-                circuitsMap[coord2] = ci
+                circuits_map[coord_1] = ci
+                circuits_map[coord_2] = ci
                 ci += 1
 
-    sizes = Counter(circuitsMap.values())
+    sizes = Counter(circuits_map.values())
     top3 = sorted(sizes.values(), reverse=True)[:3]
     return prod(top3)
 

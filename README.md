@@ -13,7 +13,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 5 | Cafeteria | [Part 1](day5/part1/main.py), [Part 2](day5/part2/main.py) | ✅ |
 | 6 | Trash Compactor | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
 | 7 | Laboratories | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
-| 8 | Playground | [Part 1](day8/part1/main.py), Part 2 TBD | ⏳ |
+| 8 | Playground | [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py) | ✅ |
 | 9-25 | TBD | - | ⏳ |
 
 ## Structure
@@ -113,9 +113,9 @@ The solution processes directional rotation instructions (L/R followed by a numb
 
 **Part 1:** The solution processes 3D coordinates to identify connected circuits by calculating Euclidean distances. It generates edges between points within a certain distance threshold, then uses a union-find approach to group them into circuits. Finally, it finds the three largest circuit sizes and multiplies them together.
 
-**Part 2:** Not implemented yet.
+**Part 2:** The solution sorts all possible edges by Euclidean distance and processes them in order using union-find to merge circuits. The last merge connects the two remaining components, and the product of the x-coordinates of the two points forming that edge gives the answer for the last two junction boxes.
 
-**Files:** [Part 1](day8/part1/main.py), Part 2 TBD
+**Files:** [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py)
 
 - All solutions are written in Python 3
 - Each solution reads its input from a local `input.txt` file

@@ -1,5 +1,5 @@
 def get_mul_of_xs() -> int:
-    circuitsMap = {}
+    circuits_map = {}
     x1, x2 = 0, 0
     with open("../input.txt") as f:
         lines = [tuple(map(int, ln.strip().split(","))) for ln in f if ln.strip()]
@@ -18,27 +18,27 @@ def get_mul_of_xs() -> int:
         )
 
         ci = 0
-        for _, coord1, coord2 in edges:
-            in1 = coord1 in circuitsMap
-            in2 = coord2 in circuitsMap
+        for _, coord_1, coord_2 in edges:
+            in1 = coord_1 in circuits_map
+            in2 = coord_2 in circuits_map
 
             if in1 and in2:
-                c1, c2 = circuitsMap[coord1], circuitsMap[coord2]
+                c1, c2 = circuits_map[coord_1], circuits_map[coord_2]
                 if c1 == c2:
                     continue
 
-                x1, x2 = coord1[0], coord2[0]
-                for k in list(circuitsMap.keys()):
-                    if circuitsMap[k] == c2:
-                        circuitsMap[k] = c1
+                x1, x2 = coord_1[0], coord_2[0]
+                for k in list(circuits_map.keys()):
+                    if circuits_map[k] == c2:
+                        circuits_map[k] = c1
 
             elif in1:
-                circuitsMap[coord2] = circuitsMap[coord1]
+                circuits_map[coord_2] = circuits_map[coord_1]
             elif in2:
-                circuitsMap[coord1] = circuitsMap[coord2]
+                circuits_map[coord_1] = circuits_map[coord_2]
             else:
-                circuitsMap[coord1] = ci
-                circuitsMap[coord2] = ci
+                circuits_map[coord_1] = ci
+                circuits_map[coord_2] = ci
                 ci += 1
 
     return x1 * x2
