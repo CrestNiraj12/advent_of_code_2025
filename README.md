@@ -14,7 +14,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 6 | Trash Compactor | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
 | 7 | Laboratories | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
 | 8 | Playground | [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py) | ✅ |
-| 9-25 | TBD | - | ⏳ |
+| 9 | Movie Theater | [Part 1](day9/part1/main.py) | ⏳ |
 
 ## Structure
 
@@ -104,6 +104,12 @@ This repository contains my personal solutions to the Advent of Code 2025 challe
 **Part 2:** The solution sorts all possible edges by Euclidean distance and processes them in order using union-find to merge circuits. The last merge connects the two remaining components, and the product of the x-coordinates of the two points forming that edge gives the answer for the last two junction boxes.
 
 **Files:** [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py)
+
+### Day 9: Movie Theater
+
+**Part 1:** Given a set of 2D coordinates, this solution finds the maximum area of an axis-aligned rectangle formed by any two points as opposite corners. It sorts the points by x-coordinate, then iterates through all pairs to calculate the area, with an optimization to skip pairs when the maximum possible area is smaller than the current maximum.
+
+**Files:** [Part 1](day9/part1/main.py)
 
 - All solutions are written in Python 3
 - Each solution reads its input from a local `input.txt` file
