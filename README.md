@@ -14,7 +14,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 6 | Trash Compactor | [Part 1](day6/part1/main.py), [Part 2](day6/part2/main.py) | ✅ |
 | 7 | Laboratories | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
 | 8 | Playground | [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py) | ✅ |
-| 9 | Movie Theater | [Part 1](day9/part1/main.py) | ⏳ |
+| 9 | Movie Theater | [Part 1](day9/part1/main.py), [Part 2](day9/part2/main.py) | ✅ |
 
 ## Structure
 
@@ -109,7 +109,9 @@ This repository contains my personal solutions to the Advent of Code 2025 challe
 
 **Part 1:** Given a set of 2D coordinates, this solution finds the maximum area of an axis-aligned rectangle formed by any two points as opposite corners. It sorts the points by x-coordinate, then iterates through all pairs to calculate the area, with an optimization to skip pairs when the maximum possible area is smaller than the current maximum.
 
-**Files:** [Part 1](day9/part1/main.py)
+**Part 2:** Uses coordinate compression and flood fill algorithm to find the largest valid rectangle containing only red and green tiles (no outside tiles). The solution compresses the coordinate space, traces the boundary, performs flood fill to identify outside regions, builds a 2D prefix sum array, and then iterates through all pairs of compressed coordinates to find the maximum area rectangle with zero outside tiles.
+
+**Files:** [Part 1](day9/part1/main.py), [Part 2](day9/part2/main.py)
 
 - All solutions are written in Python 3
 - Each solution reads its input from a local `input.txt` file
