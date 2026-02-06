@@ -15,6 +15,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 7 | Laboratories | [Part 1](day7/part1/main.py), [Part 2](day7/part2/main.py) | ✅ |
 | 8 | Playground | [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py) | ✅ |
 | 9 | Movie Theater | [Part 1](day9/part1/main.py), [Part 2](day9/part2/main.py) | ✅ |
+| 10 | Factory | [Part 1](day10/part1/main.py) | ⏳ |
 
 ## Structure
 
@@ -112,6 +113,12 @@ This repository contains my personal solutions to the Advent of Code 2025 challe
 **Part 2:** Uses coordinate compression and flood fill algorithm to find the largest valid rectangle containing only red and green tiles (no outside tiles). The solution compresses the coordinate space, traces the boundary, performs flood fill to identify outside regions, builds a 2D prefix sum array, and then iterates through all pairs of compressed coordinates to find the maximum area rectangle with zero outside tiles.
 
 **Files:** [Part 1](day9/part1/main.py), [Part 2](day9/part2/main.py)
+
+### Day 10: Factory
+
+**Part 1:** The solution finds the minimum number of button presses needed to toggle lights from an initial state to a target state. Each button toggles a specific set of lights (represented as a bitmask). The algorithm uses BFS (breadth-first search) to explore all possible states reachable by pressing different combinations of buttons, tracking the number of presses required to reach each state until the target state is found.
+
+**Files:** [Part 1](day10/part1/main.py)
 
 - All solutions are written in Python 3
 - Each solution reads its input from a local `input.txt` file
