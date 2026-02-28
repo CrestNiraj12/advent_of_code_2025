@@ -27,12 +27,11 @@ def total_min_button_presses() -> int:
 
             q = deque([0])
             ps = {0: 0}
-            min_press = 0
 
             while q:
                 s = q.popleft()
                 if s == target:
-                    min_press = ps[s]
+                    presses += ps[s]
                     break
 
                 for b in buttons:
@@ -40,7 +39,6 @@ def total_min_button_presses() -> int:
                     if ns not in ps:
                         ps[ns] = ps[s] + 1
                         q.append(ns)
-            presses += min_press
     return presses
 
 
