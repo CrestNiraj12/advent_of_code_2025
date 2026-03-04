@@ -125,7 +125,7 @@ This repository contains my personal solutions to the Advent of Code 2025 challe
 
 ### Day 11: Reactor
 
-**Part 1:** The solution finds all distinct paths from "you" to "out" in a directed graph structure. It parses the input file to build an adjacency dictionary where each location maps to a list of reachable locations. Using BFS (breadth-first search) with a deque, it explores all possible paths starting from "you", counting each unique path that successfully reaches "out" and returns the total number of different path combinations.
+**Part 1:** The solution finds all distinct paths from "you" to "out" in a directed graph structure. It parses the input file to build an adjacency dictionary where each location maps to a list of reachable locations. Using DFS (depth-first search) with memoization, it recursively explores all possible paths starting from "you", counting each unique path that successfully reaches "out" and returns the total number of different path combinations.
 
 **Files:** [Part 1](day11/part1/main.py)
 
