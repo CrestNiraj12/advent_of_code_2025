@@ -47,6 +47,7 @@ def solve_machine(buttons: list[Button], target: State) -> int:
         for j in range(m):
             if (mask >> j) & 1 == 0:
                 continue
+
             presses += 1
             for i in buttons[j]:
                 joltage[i] += 1
@@ -55,20 +56,19 @@ def solve_machine(buttons: list[Button], target: State) -> int:
         pat = pattern(jv)
         combos_by_pattern.setdefault(pat, []).append((presses, jv))
 
-    # Memoized recursion: T = Ar + 2Ay  =>  y solves (T - Ar)/2
     cache: Dict[State, int] = {}
 
     def count_presses(t: State) -> int:
         if t in cache:
             return cache[t]
 
-        # Reject negative, accept all-zero
         only_zeros = True
         for v in t:
             if v < 0:
                 return INF
             if v > 0:
                 only_zeros = False
+
         if only_zeros:
             return 0
 
@@ -79,9 +79,7 @@ def solve_machine(buttons: list[Button], target: State) -> int:
             return INF
 
         best = INF
-        # try all parity-compatible subsets
         for presses, jv in combos:
-            # compute (t - jv) / 2 (guaranteed integer if parity matches)
             half = []
             ok = True
             for i in range(n):
@@ -89,7 +87,9 @@ def solve_machine(buttons: list[Button], target: State) -> int:
                 if diff < 0:
                     ok = False
                     break
+
                 half.append(diff // 2)
+
             if not ok:
                 continue
 
@@ -107,6 +107,7 @@ def solve_machine(buttons: list[Button], target: State) -> int:
     ans = count_presses(target)
     if ans >= INF:
         raise ValueError(f"Unreachable target: {target}")
+
     return ans
 
 
