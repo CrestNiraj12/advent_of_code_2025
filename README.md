@@ -16,6 +16,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 8 | Playground | [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py) | ✅ |
 | 9 | Movie Theater | [Part 1](day9/part1/main.py), [Part 2](day9/part2/main.py) | ✅ |
 | 10 | Factory | [Part 1](day10/part1/main.py), [Part 2](day10/part2/main.py) | ✅ |
+| 11 | Reactor | [Part 1](day11/part1/main.py) | ⏳ |
 
 ## Structure
 
@@ -121,6 +122,12 @@ This repository contains my personal solutions to the Advent of Code 2025 challe
 **Part 2:** Extends the button-pressing problem to handle multiple test cases with different button configurations and target states. For each test case, it generates all possible button press combinations, groups them by parity pattern (odd/even state of each light), and uses memoized recursion to find the minimum presses. The key insight is that the relationship T = A*r + 2*A*y allows breaking down the problem recursively, solving (T - A*r)/2 at each step until reaching the target state with all zeros.
 
 **Files:** [Part 1](day10/part1/main.py), [Part 2](day10/part2/main.py)
+
+### Day 11: Reactor
+
+**Part 1:** The solution finds all distinct paths from "you" to "out" in a directed graph structure. It parses the input file to build an adjacency dictionary where each location maps to a list of reachable locations. Using BFS (breadth-first search) with a deque, it explores all possible paths starting from "you", counting each unique path that successfully reaches "out" and returns the total number of different path combinations.
+
+**Files:** [Part 1](day11/part1/main.py)
 
 - All solutions are written in Python 3
 - Each solution reads its input from a local `input.txt` file
