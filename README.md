@@ -16,7 +16,7 @@ My solutions for [Advent of Code 2025](https://adventofcode.com/2025) problems.
 | 8 | Playground | [Part 1](day8/part1/main.py), [Part 2](day8/part2/main.py) | ✅ |
 | 9 | Movie Theater | [Part 1](day9/part1/main.py), [Part 2](day9/part2/main.py) | ✅ |
 | 10 | Factory | [Part 1](day10/part1/main.py), [Part 2](day10/part2/main.py) | ✅ |
-| 11 | Reactor | [Part 1](day11/part1/main.py) | ⏳ |
+| 11 | Reactor | [Part 1](day11/part1/main.py), [Part 2](day11/part2/main.py) | ✅ |
 
 ## Structure
 
